@@ -1,4 +1,3 @@
-
 window.onload = function(){
 	var getNavi = document.getElementById('navigation');
 
