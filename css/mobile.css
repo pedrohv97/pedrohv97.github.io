@@ -82,7 +82,7 @@
 		float: none;
 		text-align: center;
 		width: 100%;
-	}
+	}       
 	#body.home .footer div ul li a{
 		height: 100%;
 		width: 100%;
@@ -92,6 +92,12 @@
 		margin: 0 auto;
 		width: 90%;
 	}
+        
+    #body.home .footer div ul video{
+        margin: 0 auto;
+        width: 90%;
+    }
+        
 	#body.home .footer div ul li a span {
 		left: 46%;
 		top: 39%;
@@ -203,6 +209,10 @@
 	img {
 		max-width: 100%;
 	}
+    
+    video {
+        max-width: 100%;
+    }
 	body #page {
 		margin: 0;
 		overflow: hidden;

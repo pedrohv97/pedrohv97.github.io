@@ -44,6 +44,7 @@ img {
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%;
+    z-index: 1;
 }
 #header div {
 	margin: 0 auto;
@@ -282,6 +283,10 @@ img {
 	margin: 0;
 	padding: 0;
 	width: auto;
+}
+#body.home .footer video{
+    position: inherit;
+    z-index: -1;
 }
 #body.home .footer div ul li a:hover img {
 	filter: alpha(opacity=70);/* Needed for IE8 and old versions */
