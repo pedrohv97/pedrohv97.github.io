@@ -5,13 +5,15 @@ body {
 	width: auto;
 }
 body #page {
-	background: url("../images/bg-home.jpg") no-repeat scroll center top #000000;
+	background: url("../images/videoImage.jpg") no-repeat scroll center top #000000;
 	margin: 0;
 	overflow: hidden;
 	padding: 0;
 	width: auto;
 	z-index: 3;
+    background-size: 1600px
 }
+
 a {
 	text-decoration: none;
 	outline: none;
@@ -22,13 +24,27 @@ a:active {
 img {
 	border: none;
 }
+
+.home{
+    padding-top: 60px;
+}
+/*-----------------------------------------FUENTES---------------------------------------------*/
+@font-face {
+	font-family: 'audiowide-regular-webfont';
+	src: url('../fonts/audiowide-regular-webfont.eot');
+	src: url('../fonts/audiowide-regular-webfont.woff') format('woff'), url('../fonts/audiowide-regular-webfont.ttf') format('truetype'), url('../fonts/audiowide-regular-webfont.svg') format('svg');
+}
 /*----------------------------------------header-styles---------------------------------------*/
 #header {
-	background: url(../images/bg-transparent1.png) repeat;
+	background: #000000;
 	margin: 0;
 	min-height: 60px;
 	padding: 0;
 	width: auto;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%;
+    z-index: 1;
 }
 #header div {
 	margin: 0 auto;
@@ -42,7 +58,7 @@ img {
 	height: 60px;
 	margin: 0 44px 0 0;
 	padding: 0;
-	width: 230px;
+	width: 223.60px;
 }
 #header div a img {
 	display: block;
@@ -80,61 +96,11 @@ img {
 	width: auto;
 }
 #header div ul li a:hover {
-	background-color: #620031;
+	background-color: #c2b195;
 	color: #ffffff;
 }
 #header div ul li.selected a {
-	background-color: #000000;
-	color: #a3a3a3;
-}
-#header div ul li.menu {
-	position: relative;
-}
-#header div ul li.menu ul {
-	display: block;
-	left: -99999px;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	position: absolute;
-	top: 60px;
-	width: 142px;
-	z-index: 50;
-}
-#header div ul li.menu:hover ul.primary {
-	left: 31px;
-}
-#header div ul li.menu ul.primary.selected {
-	left: 31px;
-}
-#header div ul li.menu:hover ul.secondary {
-	left: -20px;
-}
-#header div ul li.menu ul.secondary.selected {
-	left: -20px;
-}
-#header div ul li.menu ul li {
-	margin: 0;
-	padding: 0;
-	width: auto;
-}
-#header div ul li.menu ul li a {
-	background-color: #620031;
-	color: #ffffff;
-	display: block;
-	font-family: Arial;
-	font-size: 18px;
-	font-weight: normal;
-	line-height: 60px;
-	margin: 0;
-	min-height: 60px;
-	padding: 0 10px;
-	text-align: center;
-	text-transform: uppercase;
-	width: auto;
-}
-#header div ul li.menu ul.primary.selected li a, #header div ul li.menu ul.secondary.selected li a {
-	background-color: #000000;
+	background-color: #358540;
 	color: #a3a3a3;
 }
 /*----------------------------------------body-home-styles---------------------------------------*/
@@ -149,7 +115,7 @@ img {
 #body.home {
 	background: none;
 	margin: 0;
-	min-height: 1108px;
+	min-height: 1308px;
 	overflow: hidden;
 	padding: 0;
 	width: 100%;
@@ -161,24 +127,18 @@ img {
 	padding: 0;
 	width: 100%;
 }
-#body.home .header div {
-	margin: 0 auto;
-	max-width: 940px;
-	overflow: hidden;
-	padding: 0 10px;
-	position: relative;
-}
+
 #body.home .header div h1 {
 	color: #FFFFFF;
 	display: block;
-	float: right;
-	font-family: 'Orbitron', sans-serif;
+	
+	font-family: audiowide-regular-webfont;
 	font-size: 60px;
 	font-weight: normal;
 	line-height: 60px;
-	margin: 20px 0 27px;
-	padding: 0 38px 0 399px;
-	position: relative;
+	margin: 190px 0 27px;
+	padding: 0 38px 0 399 px;
+	position: inherit;
 	text-align: right;
 	text-transform: uppercase;
 	width: 503px;
@@ -187,16 +147,16 @@ img {
 #body.home .header div h2 {
 	color: #FFFFFF;
 	display: block;
-	float: right;
-	font-family: helvetica;
+	float: left;
+	font-family: Arial;
 	font-size: 43px;
 	font-weight: normal;
 	line-height: 43px;
 	margin: 0 0 36px;
-    padding: 0 38px 0 399px;
-	position: relative;
+	padding: 0px 500px 0 100px;
+	position: inherit;
 	text-align: right;
-	text-transform: uppercase;
+	text-transform: uppercase f;
 	width: 288px;
 	z-index: 60;
 }
@@ -204,87 +164,28 @@ img {
 	background-color: #000000;
 	color: #a3a3a3;
 	display: block;
-	float: right;
+	float: left;
 	font-family: Arial;
 	font-size: 18px;
 	font-weight: normal;
 	height: 49px;
 	line-height: 49px;
+	margin: 0 200px 0 200px;
 	padding: 0;
 	text-align: center;
 	text-transform: uppercase;
-	position: relative;
+	position: inherit;
 	width: 180px;
 	z-index: 55;
-}
-#body.home .header div a.more:hover {
-	background-color: #ab000b;
-	color: #ffffff;
-}
-#body.home .header div h3 {
-	background: url("../images/bg-transparent1.png") repeat;
-	color: #A3A3A3;
-	float: left;
-	font-family: Helvetica;
-	font-size: 23px;
-	font-weight: normal;
-	line-height: 23px;
-	margin: 96px 0 0;
- *margin: 102px 0 0;/* Needed for IE8 and old versions */
-	min-height: 27px;
-	padding: 17px 0 10px;
-	position: relative;
-	text-align: center;
-	text-transform: uppercase;
-	width: 940px;
-}
-#body.home .header div ul {
-	display: inline-block;
-	list-style: none outside none;
-	margin: 0 0 -6px;
-	overflow: hidden;
-	padding: 0;
-	width: auto;
-}
-#body.home .header div ul li:first-child {
-	padding: 0;
-}
-#body.home .header div ul li {
-	border: medium none;
-	float: left;
-	margin: 0;
-	padding: 0;
-	width: auto;
-}
-#body.home .header div ul li a {
-	display: block;
-	float: none;
-	height: 156px;
-	margin: 0;
-	padding: 0;
-	width: 235px;
-}
-#body.home .header div ul li a img {
-	cursor: pointer;
-	filter: alpha(opacity=100);/* Needed for IE8 and old versions */
-	opacity: 1.0;
-	display: block;
-	margin: 0;
-	padding: 0;
-	width: auto;
-}
-#body.home .header div ul li a img:hover {
-	filter: alpha(opacity=70);/* Needed for IE8 and old versions */
-	opacity: 0.7;
+    margin-bottom: 200px;
 }
 #body.home .body {
-	background: url(../images/bg-transparent1.png) repeat;
+	background-color: #1F201A;
 	margin: 0;
 	min-height: 168px;
 	overflow: hidden;
 	padding: 0;
-	width: 60%;
-    margin: auto
+	width: 100%;
 }
 #body.home .body div {
 	margin: 0 auto;
@@ -295,7 +196,7 @@ img {
 #body.home .body div h1 {
 	color: #FFFFFF;
 	display: block;
-	font-family: 'Orbitron', sans-serif;;
+	font-family: audiowide-regular-webfont;
 	font-size: 32px;
 	font-weight: normal;
 	line-height: 32px;
@@ -317,19 +218,10 @@ img {
 	text-align: center;
 	width: 780px;
 }
-#body.home .body div p a {
-	color: #ffffff;
-	font-family: Arial;
-	font-size: 18px;
-	font-weight: normal;
-	line-height: 24px;
-	margin: 0 auto;
-	padding: 0;
-	text-decoration: underline;
-}
 #body.home .body div p a:hover {
 	color: #a3a3a3;
 }
+
 #body.home .footer {
 	background-color: #000000;
 	margin: 0;
@@ -365,7 +257,7 @@ img {
 }
 #body.home .footer div ul li h1 {
 	color: #FFFFFF;
-	font-family: 'Orbitron', sans-serif;
+	font-family: audiowide-regular-webfont;
 	font-size: 32px;
 	font-weight: normal;
 	line-height: 32px;
@@ -392,9 +284,24 @@ img {
 	padding: 0;
 	width: auto;
 }
+#body.home .footer video{
+    position: inherit;
+    z-index: -1;
+}
 #body.home .footer div ul li a:hover img {
 	filter: alpha(opacity=70);/* Needed for IE8 and old versions */
 	opacity: 0.7;
+}
+#body.home .footer div ul li a span {
+	background: url(../images/icons.png) no-repeat 0 -152px;
+	display: block;
+	height: 72px;
+	left: 199px;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 94px;
+	width: 62px;
 }
 #body.home .footer div ul li a:hover span {
 	background: url(../images/icons.png) no-repeat 0 -226px;
@@ -445,7 +352,7 @@ img {
 #body.home .footer div ul li ul li h1 {
 	color: #A3A3A3;
 	float: left;
-	font-family: helvetica;
+	font-family: audiowide-regular-webfont;
 	font-size: 23px;
 	font-weight: normal;
 	line-height: 23px;
@@ -470,7 +377,7 @@ img {
 	width: 310px;
 }
 #body.home .footer div ul li ul li a.more {
-	background-color: #3c0f38;
+	background-color: #358540;
 	color: #ffffff;
 	display: block;
 	float: right;
@@ -486,14 +393,14 @@ img {
 	width: 120px;
 }
 #body.home .footer div ul li ul li a.more:hover {
-	background-color: #620031;
+	background-color: #C2B195;
 }
 /*----------------------------------------body-styles---------------------------------------*/
 #body.about .header {
-	background: url(../images/bg-about.jpg) no-repeat center top #000000;
+	background: url(../images/fondo.jpg) no-repeat top #000000;
     background-size: cover;
 	margin: 0;
-	min-height: 455px;
+	min-height:800px;
 	padding: 0;
 	width: 100%;
 }
@@ -506,20 +413,21 @@ img {
 #body.about .header div h1, #body .header div h1 {
 	color: #FFFFFF;
 	display: block;
-	font-family: 'Orbitron', sans-serif;
+	font-family: audiowide-regular-webfont;
 	font-size: 36px;
 	font-weight: normal;
-	line-height: 36px;
-	margin: 0 auto 87px;
+	line-height: 80px;
+	margin: 0 auto 200px;
 	padding: 0;
 	text-align: center;
 	text-transform: uppercase;
 	width: 940px;
+    margin-top: 100px;
 }
 #body.about .header div h2 {
 	color: #FFFFFF;
 	display: block;
-	font-family: 'Orbitron', sans-serif;
+	font-family: audiowide-regular-webfont;
 	font-size: 32px;
 	font-weight: normal;
 	line-height: 32px;
@@ -541,8 +449,21 @@ img {
 	text-align: center;
 	width: 820px;
 }
+#body.about .header div p a {
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 24px;
+	margin: 0;
+	padding: 0;
+	text-decoration: underline;
+}
+#body.about .header div p a:hover {
+	color: #a3a3a3;
+}
 #body.about .body {
-	background-color: #620031;
+	background-color: #000000;
 	margin: 0;
 	min-height: 253px;
 	overflow: hidden;
@@ -558,7 +479,7 @@ img {
 #body.about .body div h2 {
 	color: #A3A3A3;
 	float: left;
-	font-family: 'Orbitron', sans-serif;
+	font-family: audiowide-regular-webfont;
 	font-size: 23px;
 	font-weight: normal;
 	line-height: 23px;
@@ -573,7 +494,7 @@ img {
 	display: block;
 	float: left;
 	font-family: Arial;
-	font-size: 17px;
+	font-size: 14px;
 	font-weight: normal;
 	line-height: 24px;
 	margin: 0;
@@ -617,7 +538,7 @@ img {
 #body.about .footer div h2 {
 	color: #A3A3A3;
 	float: right;
-	font-family: 'Orbitron', sans-serif;
+	font-family: audiowide-regular-webfont;
 	font-size: 23px;
 	font-weight: normal;
 	line-height: 23px;
@@ -661,7 +582,7 @@ img {
 	width: auto;
 }
 #body.about .section {
-	background-color: #3c0f38;
+	background-color: #1f201a;
 	margin: 0;
 	min-height: 234px;
 	padding: 0;
@@ -676,7 +597,7 @@ img {
 #body.about .section div h2 {
 	color: #A3A3A3;
 	display: block;
-	font-family: Helvetica;
+	font-family: audiowide-regular-webfont;
 	font-size: 23px;
 	font-weight: normal;
 	line-height: 23px;
@@ -686,6 +607,7 @@ img {
 	text-transform: uppercase;
 	width: 780px;
 }
+
 #body.about .section div p {
 	color: #ffffff;
 	display: block;
@@ -761,11 +683,19 @@ img {
 	overflow: hidden;
 	padding: 0;
 	width: 520px;
-    margin-bottom: 100px;
 }
+
+#body .header div ul li div2 {
+	float: center;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	width: 520px;
+}
+
 #body .header div ul li div h1 {
 	color: #A3A3A3;
-	font-family: 'Orbitron', sans-serif;
+	font-family: audiowide-regular-webfont;
 	font-size: 23px;
 	font-weight: normal;
 	line-height: 23px;
@@ -774,6 +704,7 @@ img {
 	text-align: left;
 	text-transform: uppercase;
 	width: 520px;
+    margin-bottom: 50px;
 }
 #body .header div ul li div p {
 	color: #FFFFFF;
@@ -785,18 +716,7 @@ img {
 	padding: 0;
 	text-align: left;
 	width: 520px;
-}
-#body .header div p1 {
-	color: #FFFFFF;
-	display: block;
-	font-family: Arial;
-	font-size: 14px;
-	font-weight: normal;
-	line-height: 24px;
-	margin: 0 auto 48px;
-	padding: 0;
-	text-align: left;
-	width: 780px;
+    margin-bottom: 200px;
 }
 #body .header div ul li div p a {
 	color: #FFFFFF;
@@ -816,7 +736,7 @@ img {
 	color: #a3a3a3;
 }
 #body .header div ul li div a.more {
-	background-color: #3c0f38;
+	background-color: #C2B195;
 	color: #ffffff;
 	display: block;
 	float: right;
@@ -832,7 +752,7 @@ img {
 	width: 120px;
 }
 #body .header div ul li div a.more:hover {
-	background-color: #620031;
+	background-color: #1F201A;
 }
 #body .header div img {
 	display: block;
@@ -843,7 +763,7 @@ img {
 #body .header div h2 {
 	color: #A3A3A3;
 	display: block;
-	font-family: Helvetica;
+	font-family: audiowide-regular-webfont;
 	font-size: 23px;
 	font-weight: normal;
 	line-height: 23px;
@@ -865,6 +785,19 @@ img {
 	text-align: center;
 	width: 780px;
 }
+#body .header div p1 {
+	color: #FFFFFF;
+	display: block;
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 24px;
+	margin: 0 auto 48px;
+	padding: 0;
+	text-align: left;
+	width: 780px;
+}
+
 #body .header div p a {
 	color: #ffffff;
 	font-family: Arial;
@@ -924,7 +857,7 @@ img {
 }
 #body .header div .article ul li h1 {
 	color: #A3A3A3;
-	font-family: 'Orbitron', sans-serif;
+	font-family: audiowide-regular-webfont;
 	font-size: 23px;
 	font-weight: normal;
 	line-height: 23px;
@@ -958,25 +891,8 @@ img {
 	text-align: left;
 	width: auto;
 }
-#body .header div .article ul li p a {
-	color: #FFFFFF;
-	display: inline;
-	float: none;
-	font-family: Arial;
-	font-size: 14px;
-	font-weight: normal;
-	height: auto;
-	line-height: 24px;
-	margin: 0;
-	padding: 0;
-	text-decoration: underline;
-	width: auto;
-}
-#body .header div .article ul li p a:hover {
-	color: #a3a3a3;
-}
 #body .header div .article ul li a.more {
-	background-color: #3c0f38;
+	background-color: #358540;
 	color: #ffffff;
 	display: block;
 	float: right;
@@ -992,7 +908,7 @@ img {
 	width: 120px;
 }
 #body .header div .article ul li a.more:hover {
-	background-color: #620031;
+	background-color: #a3a3a3;
 }
 #body .header div .sidebar {
 	float: left;
@@ -1020,7 +936,7 @@ img {
 }
 #body .header div .sidebar ul li h1 {
 	color: #FFFFFF;
-	font-family: 'Orbitron', sans-serif;
+	font-family: audiowide-regular-webfont;
 	font-size: 32px;
 	font-weight: normal;
 	line-height: 32px;
@@ -1053,7 +969,7 @@ img {
 }
 #body .header div .sidebar ul li h2 {
 	color: #A3A3A3;
-	font-family: Helvetica;
+	font-family: audiowide-regular-webfont;
 	font-size: 23px;
 	font-weight: normal;
 	line-height: 23px;
@@ -1097,7 +1013,7 @@ img {
 	display: block;
 	float: left;
 	height: 54px;
-	margin: 0 20px 0 0;
+	margin: 0 20px 9px 0;
 	padding: 0;
 	width: 60px;
 }
@@ -1117,7 +1033,7 @@ img {
 #body .header div .sidebar ul li ul li h2 {
 	color: #A3A3A3;
 	float: left;
-	font-family: 'Orbitron', sans-serif;
+	font-family: audiowide-regular-webfont;
 	font-size: 23px;
 	font-weight: normal;
 	line-height: 23px;
@@ -1132,12 +1048,12 @@ img {
 	display: block;
 	float: left;
 	font-family: Arial;
-	font-size: 14px;
-	line-height: 14px;
+	font-size: 15px;
+	line-height: 20px;
 	margin: 0;
 	padding: 0;
 	text-align: left;
-	text-transform: uppercase;
+	text-transform: lowercase;
 	width: auto;
 }
 #body .header div .article img {
@@ -1148,7 +1064,7 @@ img {
 }
 #body .header div .article h1 {
 	color: #A3A3A3;
-	font-family: Helvetica;
+	font-family: audiowide-regular-webfont;
 	font-size: 23px;
 	font-weight: normal;
 	line-height: 23px;
@@ -1198,7 +1114,7 @@ img {
 #body .header .contact h2 {
 	color: #A3A3A3;
 	display: block;
-	font-family: Helvetica;
+	font-family: audiowide-regular-webfont;
 	font-size: 23px;
 	font-weight: normal;
 	line-height: 23px;
@@ -1249,7 +1165,7 @@ img {
 	width: 441px;
 }
 #body .header div form input#submit {
-	background-color: #3c0f38;
+	background-color: #358540;
 	color: #ffffff;
 	cursor: pointer;
 	display: block;
@@ -1266,9 +1182,8 @@ img {
 	width: 120px;
 }
 #body .header div form input#submit:hover {
-	background-color: #620031;
+	background-color: #a3a3a3;
 }
-
 /*----------------------------------------footer-styles---------------------------------------*/
 #footer {
 	margin: 0;
@@ -1292,7 +1207,7 @@ img {
 #footer .connect div h1 {
 	color: #FFFFFF;
 	float: left;
-	font-family: 'Orbitron', sans-serif;
+	font-family: audiowide-regular-webfont;
 	font-size: 23px;
 	font-weight: normal;
 	line-height: 23px;
